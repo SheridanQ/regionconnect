@@ -24,6 +24,14 @@ DESCRIPTION = """
 		1. take the mask of user-defined ROI in the IIT Human Brain Atlas space
 		2. output a file where information about the ROI will be sored.
 
+	Usages:
+
+	regionconnect.py ROI_MASK OUT_TXT
+
+	or 
+
+	import regionconnect.get_txt
+
 	Author email: Xiaoxiao Qi xqi10@hawk.iit.edu
 
 """
@@ -34,7 +42,7 @@ def buildArgsParser():
 
 	p.add_argument('ROI_mask', action='store', metavar='ROI_MASK', type=str, 
 					help="User-defined ROI mask")
-	p.add_argument('output_file', action='store', metavar='OUTTXT', type=str,
+	p.add_argument('output_file', action='store', metavar='OUT_TXT', type=str,
 					help="Output text file")
 
 	return p
@@ -77,7 +85,7 @@ def _get_atlas_files(roi_shape):
 
 	else:
 		print('###')
-		print('###ROI is not in IIT space, please register your file to the IIT space first.')
+		print('###ROI is not in the IIT space, please register your file to the IIT space first.')
 		print('###')
 		return
 

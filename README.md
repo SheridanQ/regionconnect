@@ -5,7 +5,7 @@ IIT Human Brain Atlas regionconnect app.
 
 # Getting the most probable connections:
 
-#License:
+# License:
 For non-commercial usage:
 IIT license (See LICENSE)
 For commercial usage:

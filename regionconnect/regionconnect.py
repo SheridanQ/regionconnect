@@ -59,9 +59,9 @@ def _get_atlas_files(roi_shape):
 		_url_top_fib_filename = 'https://www.nitrc.org/frs/download.php/11387/IIT_WM_atlas_256.nii.gz'
 		_url_top_fib_conf_filename = 'https://www.nitrc.org/frs/download.php/11390/IIT_WM_atlas_confidence_256.nii.gz'
 
-		total_filename = resource_filename('regionconnect', 'atlas/IIT_TDI_sum_256.nii.gz')
-		top_fib_filename = resource_filename('regionconnect', 'atlas/IIT_WM_atlas_256.nii.gz')
-		top_fib_conf_filename = resource_filename('regionconnect', 'atlas/IIT_WM_atlas_confidence_256.nii.gz')
+		total_filename = resource_filename('regionconnect', 'IIT_TDI_sum_256.nii.gz')
+		top_fib_filename = resource_filename('regionconnect', 'IIT_WM_atlas_256.nii.gz')
+		top_fib_conf_filename = resource_filename('regionconnect', 'IIT_WM_atlas_confidence_256.nii.gz')
 
 		if not (os.path.isfile(total_filename) and os.path.isfile(top_fib_filename) and os.path.isfile(top_fib_conf_filename)):
 			urllib.request.urlretrieve(_url_total_filename, total_filename)
@@ -73,9 +73,9 @@ def _get_atlas_files(roi_shape):
 		_url_top_fib_filename = 'https://www.nitrc.org/frs/download.php/11375/IIT_WM_atlas.nii.gz'
 		_url_top_fib_conf_filename = 'https://www.nitrc.org/frs/download.php/11373/IIT_WM_atlas_confidence.nii.gz'
 
-		total_filename = resource_filename('regionconnect', 'atlas/IIT_TDI_sum.nii.gz')
-		top_fib_filename = resource_filename('regionconnect', 'atlas/IIT_WM_atlas.nii.gz')
-		top_fib_conf_filename = resource_filename('regionconnect', 'atlas/IIT_WM_atlas_confidence.nii.gz')
+		total_filename = resource_filename('regionconnect', 'IIT_TDI_sum.nii.gz')
+		top_fib_filename = resource_filename('regionconnect', 'IIT_WM_atlas.nii.gz')
+		top_fib_conf_filename = resource_filename('regionconnect', 'IIT_WM_atlas_confidence.nii.gz')
 
 		if not (os.path.isfile(total_filename) and os.path.isfile(top_fib_filename) and os.path.isfile(top_fib_conf_filename)):
 			urllib.request.urlretrieve(_url_total_filename, total_filename)

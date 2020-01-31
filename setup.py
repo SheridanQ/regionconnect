@@ -19,5 +19,4 @@ setup(name='regionconnect',
       classifiers=['Development Status :: 3 - Alpha', 
                   'Intended Audience :: Developers',
                   'Topic :: Software Development :: Build Tools'],
-      package_data={'atlas':['LICENSE','README.md']},
       entry_points={'console_scripts':['regionconnect=regionconnect:regionconnect']})

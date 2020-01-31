@@ -27,9 +27,9 @@ DESCRIPTION = """
 	./regionconnect/regionconnect.py ROI_MASK OUT_TXT
 
 	or 
-	Using python console:
-	>>from regionconnect import get_connections
-    >>get_connections(ROI_MASK, OUT_TXT)
+	Python console:
+	>>from regionconnect import regionconnect as rc
+	>>rc.regionconnect(ROI_MASK, OUT_TXT)
 
 	Author email: Xiaoxiao Qi, xqi10@hawk.iit.edu
 

@@ -159,7 +159,7 @@ def _get_name_of_label(labelnumber):
 	return label_name
 
 
-def get_connections(roi_file, out_txt):
+def regionconnect(roi_file, out_txt):
 	"""
 	Input: An ROI mask image file
 	Return: a list of strings that contains the information about connections
@@ -217,5 +217,5 @@ if __name__ == "__main__":
 	if os.path.isfile(output_file_input):
 		parser.error('"{0}" exists! Please change the file name. '.format(output_file_input))
 
-	get_connections(roi_mask_input, output_file_input)
+	regionconnect(roi_mask_input, output_file_input)
 

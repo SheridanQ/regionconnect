@@ -2,22 +2,22 @@
 IIT Human Brain Atlas regionconnect app.
 
 ## Getting the most probabel connections
-1. First method: import regionconnect function 
-To update your `pip` and create a virtual environment: 
+1. First method: import regionconnect function.   
+   To update your `pip` and create a virtual environment: 
 ```
 python -m pip install --upgrade pip
 python3 -m venv regionconnectTest
 source regionconnectTest/bin/activate
 python3 -m pip install regionconnect
 ```
-Launch the python console and run `regionconnect`
+   Launch python console and run `regionconnect`
 ```
 python
 >>from regionconnect import regionconnect
 >>regionconnect.regionconnect('path_to_ROI_mask','path_to_output_text_file')
 ```
 
-2.Second method: Run the regionconnect.py script directly.
+2.Second method: run the regionconnect.py script directly.
 ```
 python3 -m pip install numpy nibabel
 git clone https://github.com/SheridanQ/regionconnect.gitls
@@ -27,7 +27,7 @@ python ./regionconnect/regionconnect.py path_to_ROI_mask path_to_output_text_fil
 ```
 
 ## Links
-Details and other resources such as gray matter resources, diffusion tensor template and high angular resolution diffusion imaging template, please go to:
+To know the details and other resources such as gray matter resources, diffusion tensor template and high angular resolution diffusion imaging template, please go to:
 
 [MRIIT websit](https://www5.iit.edu/~mri/Home.html) 
 and

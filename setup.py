@@ -15,5 +15,5 @@ setup(name='regionconnect',
       packages=['regionconnect'],
       install_requires=[
       'numpy',
-      'nibabel']
+      'nibabel'],
       zip_safe=False)

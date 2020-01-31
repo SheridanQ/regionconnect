@@ -2,6 +2,7 @@ from setuptools import setup
 
 with open("README.md","r") as fh:
       long_description=fh.read()
+
 setup(name='regionconnect',
       version='0.1',
       description='IIT Human Brain Atlas regionconnect tool',
@@ -12,4 +13,7 @@ setup(name='regionconnect',
       author_email='xqi10@hawk.iit.edu',
       license='MIT',
       packages=['regionconnect'],
+      install_requires=[
+      'numpy',
+      'nibabel']
       zip_safe=False)

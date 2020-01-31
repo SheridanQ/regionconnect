@@ -6,8 +6,6 @@
 # version = '1.0'
 
 import argparse
-import glob
-import logging
 import os
 from pkg_resources import resource_filename
 
@@ -26,13 +24,14 @@ DESCRIPTION = """
 
 	Usages:
 
-	regionconnect.py ROI_MASK OUT_TXT
+	./regionconnect/regionconnect.py ROI_MASK OUT_TXT
 
 	or 
+	Using python console:
+	>>from regionconnect import get_connections
+    >>get_connections(ROI_MASK, OUT_TXT)
 
-	import regionconnect.get_txt
-
-	Author email: Xiaoxiao Qi xqi10@hawk.iit.edu
+	Author email: Xiaoxiao Qi, xqi10@hawk.iit.edu
 
 """
 
@@ -160,7 +159,7 @@ def _get_name_of_label(labelnumber):
 	return label_name
 
 
-def get_txt(roi_file, out_txt):
+def get_connections(roi_file, out_txt):
 	"""
 	Input: An ROI mask image file
 	Return: a list of strings that contains the information about connections
@@ -218,5 +217,5 @@ if __name__ == "__main__":
 	if os.path.isfile(output_file_input):
 		parser.error('"{0}" exists! Please change the file name. '.format(output_file_input))
 
-	get_txt(roi_mask_input, output_file_input)
+	get_connections(roi_mask_input, output_file_input)
 

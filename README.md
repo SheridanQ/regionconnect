@@ -1,5 +1,6 @@
 # regionconnect
-IIT Human Brain Atlas regionconnect app.
+IIT Human Brain Atlas regionconnect app. 
+Before using the regionconnect app, please register your data into the IIT space. See [IIT atlas manual](https://www.nitrc.org/frs/download.php/11488/IIT_Atlas_v.5.0_MANUAL.pdf) for more details.
 
 ## Getting the most probabel connections
 1. First method: import regionconnect function.   
@@ -21,7 +22,7 @@ python
 2. Second method: run the regionconnect.py script directly.
 ```
 python3 -m pip install numpy nibabel
-git clone https://github.com/SheridanQ/regionconnect.gitls
+git clone https://github.com/SheridanQ/regionconnect.git
 cd regionconnect
 python ./regionconnect/regionconnect.py path_to_ROI_mask path_to_output_text_file
 

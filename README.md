@@ -28,13 +28,18 @@ python ./regionconnect/regionconnect.py path_to_ROI_mask path_to_output_text_fil
 
 ```
 
+## Example
+```
+python ./regionconnect/regionconnect.py ./test/roi4.nii.gz ./test/results_roi4.txt
+```
+
 ## Links
 To know more details and other resources such as gray matter resources, diffusion tensor template and high angular resolution diffusion imaging template, please go to:
 [MRIIT websit](https://www5.iit.edu/~mri/Home.html) and [Neuroimaging Tools & Resources Collaboratory(NITRC)](https://www.nitrc.org/projects/iit/).  
 
-## References:
+## References
 Qi X., Zhang S., Arfanakis K. Enhancement and Evaluation of the White Matter Connectome of the IIT Human Brain Atlas. Proc. Int. Soc. for Magn. Reson. In Med. (ISMRM) 2019.  
 
-## License:
+## License
 For non-commercial usage: IIT license (See LICENSE).  
 For commercial usage: Please email to: mri@iit.edu 

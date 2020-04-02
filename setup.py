@@ -4,7 +4,7 @@ with open("README.md","r") as fh:
       long_description=fh.read()
 
 setup(name='regionconnect',
-      version='0.1',
+      version='0.11',
       description='IIT Human Brain Atlas regionconnect tool',
       long_description=long_description,
       long_description_content_type='text/markdown',

@@ -64,9 +64,12 @@ def _get_atlas_files(roi_shape):
 		top_fib_conf_filename = resource_filename('regionconnect', 'IIT_WM_atlas_confidence_256.nii.gz')
 
 		if not (os.path.isfile(total_filename) and os.path.isfile(top_fib_filename) and os.path.isfile(top_fib_conf_filename)):
+		    print('Downloading IIT Human Brain Atlas files from www.nitrc.org/projects/iit ......')
 			urllib.request.urlretrieve(_url_total_filename, total_filename)
 			urllib.request.urlretrieve(_url_top_fib_filename, top_fib_filename)
 			urllib.request.urlretrieve(_url_top_fib_conf_filename, top_fib_conf_filename)
+        else:
+            print('IIT Human Brain Atlas files exist.')
 
 	elif roi_shape == (182, 218, 182):
 		_url_total_filename = 'https://www.nitrc.org/frs/download.php/11366/IIT_TDI_sum.nii.gz'
@@ -78,9 +81,12 @@ def _get_atlas_files(roi_shape):
 		top_fib_conf_filename = resource_filename('regionconnect', 'IIT_WM_atlas_confidence.nii.gz')
 
 		if not (os.path.isfile(total_filename) and os.path.isfile(top_fib_filename) and os.path.isfile(top_fib_conf_filename)):
+		    print('Downloading IIT Human Brain Atlas files from www.nitrc.org/projects/iit ...')
 			urllib.request.urlretrieve(_url_total_filename, total_filename)
 			urllib.request.urlretrieve(_url_top_fib_filename, top_fib_filename)
 			urllib.request.urlretrieve(_url_top_fib_conf_filename, top_fib_conf_filename)
+        else:
+            print('IIT Human Brain Atlas files exist.')
 
 	else:
 		print('###')
@@ -170,10 +176,11 @@ def regionconnect(roi_file, out_txt):
 
 	atlas = _get_atlas_files(roi_shape)
 	if not atlas:
-		print("Exiting...")
+		print("Downloads failed. Please try again. Exiting...")
 		return
 
 	# Get percentages of ROI that are used to calculate the list.
+    print('Generating the output ...')
 	wm_atlas= nib.load(atlas[1])
 	wm_mask_img = wm_atlas.get_data()[:,:,:,0]>0 # This is the white matter mask, the first layer of labels.
 	roi_img = roi.get_data()
